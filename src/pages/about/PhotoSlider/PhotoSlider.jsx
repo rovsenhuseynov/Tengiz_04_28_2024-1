@@ -5,11 +5,11 @@ import "./PhotoSlider.scss";
 function PhotoSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    "https://i.pinimg.com/originals/d0/26/5e/d0265ec4d8fb124b1db8ccb480cfea0b.jpg",
-    "https://i.pinimg.com/originals/7c/af/ab/7cafaba7589022d7e3faf39121d0a21b.jpg",
+    "https://i.natgeofe.com/n/b9ab8443-acc5-4e24-be6f-708b547b90b5/food-in-baku.jpg?w=1260&h=840",
+    "https://www.advantour.com/img/azarbaijan/dishes/azerbaijani-dishes.jpg",
     "https://i.pinimg.com/originals/b5/06/28/b506283595af90116ef8ddae2cadaa5b.jpg",
-    "https://i.pinimg.com/originals/7b/76/5b/7b765b272687050eae007e1e659dc565.jpg",
-    "https://i.pinimg.com/originals/dc/3e/7c/dc3e7c15404c4c3930ec884bbb30a375.jpg",
+    "https://assets.jintravel.com/files/upload/jintravel/azerb%20food/xengel-azerbaijani-food-dish-cuisine-azerbaycan-metbexi-kuxnya-qastrotur-jintravel.com.jpg",
+    "https://assets.jintravel.com/files/upload/jintravel/azerb%20food/dovga-azerbaijani-food-dish-cuisine-azerbaycan-metbexi-kuxnya-qastrotur-jintravel.com.JPG",
   ];
 
   useEffect(() => {
