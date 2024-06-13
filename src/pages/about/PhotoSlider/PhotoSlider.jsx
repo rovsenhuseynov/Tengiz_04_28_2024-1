@@ -7,7 +7,7 @@ function PhotoSlider() {
   const slides = [
     "https://i.natgeofe.com/n/b9ab8443-acc5-4e24-be6f-708b547b90b5/food-in-baku.jpg?w=1260&h=840",
     "https://www.advantour.com/img/azarbaijan/dishes/azerbaijani-dishes.jpg",
-    "https://i.pinimg.com/originals/b5/06/28/b506283595af90116ef8ddae2cadaa5b.jpg",
+    "https://www.advantour.com/img/azarbaijan/dishes/pakhlava.jpg",
     "https://assets.jintravel.com/files/upload/jintravel/azerb%20food/xengel-azerbaijani-food-dish-cuisine-azerbaycan-metbexi-kuxnya-qastrotur-jintravel.com.jpg",
     "https://assets.jintravel.com/files/upload/jintravel/azerb%20food/dovga-azerbaijani-food-dish-cuisine-azerbaycan-metbexi-kuxnya-qastrotur-jintravel.com.JPG",
   ];
