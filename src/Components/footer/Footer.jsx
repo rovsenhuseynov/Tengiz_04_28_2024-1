@@ -83,7 +83,7 @@ const Footer = () => {
               />
 
               <h3 className="footer__top-left-address_block-phone-num">
-                0099&nbsp;50&nbsp;459&nbsp;59&nbsp;59
+                0099&nbsp;50&nbsp;xxx&nbsp;xx&nbsp;xx
               </h3>
             </div>
           </div>
@@ -121,7 +121,7 @@ const Footer = () => {
         &copy; 2024 Food Website. All rights reserved.
       </span>
       <h5 id="аuthor">
-        The user part of the site was developed by Rovshan Huseynov in 2024.01.{" "}
+        The user part of the site was developed by Rovshan Huseynov in 2024.01.
         <br />
         Email: rovsen.dev@gmail.com
       </h5>
