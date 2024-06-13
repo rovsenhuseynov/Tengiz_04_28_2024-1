@@ -1,0 +1,31 @@
+.parallax-reservation {
+  position: relative;
+  user-select: none;
+
+  .parallax-reservation__title-italics {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    font-size: calc(10vw + 5rem);
+    text-shadow: 1px 1px 2px black;
+  }
+
+  .parallax-reservation__title {
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 2px black;
+    text-wrap: nowrap;
+  }
+
+  .nav-link {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+}

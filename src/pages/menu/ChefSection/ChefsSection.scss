@@ -1,0 +1,20 @@
+.menu-preface {
+    padding-inline: 5vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: calc(2vw + 1rem);
+    transition: all .3s;
+    user-select: none;
+    .menu-preface__chef-image,
+    .menu-preface__chef-image {
+      width: 100%;
+      min-width: 260px;
+      max-width: 460px;
+    }
+    .menu-preface__text {
+      font-size: var(--fz_p);
+      width: 100%;
+      text-align: center;
+      text-wrap: balance;
+    }
+  }

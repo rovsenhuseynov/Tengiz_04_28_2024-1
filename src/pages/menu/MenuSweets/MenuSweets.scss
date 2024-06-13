@@ -1,0 +1,10 @@
+@import "../General_Menu_Styles.scss";
+@import "../../../assets/globalStyles.scss";
+.sweets-menu {
+  @include main-menu;
+  .sweets-menu__title {
+    @include sectional-title-styles-in-menu;
+  }
+  
+  @include mySwiper;
+}

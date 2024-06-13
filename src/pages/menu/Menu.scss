@@ -1,0 +1,53 @@
+.menu {
+  color: #fff;
+  margin-bottom: calc(3vw + 1.5rem);
+  .menu__head {
+    background: url(../../assets/image/max.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    aspect-ratio: 1.8/1;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    user-select: none;
+    padding-top: 2.5vh;
+    box-shadow: 0 4px 15px 8px rgba(0, 0, 0, 0.7);
+    margin-bottom: calc(3vw + 1.5rem);
+    @media (max-width: 600px) {
+      background: url(../../assets/image/mini.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      aspect-ratio: 1.8/1;
+    }
+
+    .home__wrapper-title {
+      color: rgba(255, 255, 255, 0.2);
+      font-size: calc(3vw + 2rem);
+      text-transform: uppercase;
+      -webkit-text-stroke: 0.6px #fff;
+    }
+
+    .home__wrapper-subtext {
+      color: #fff;
+      font-size: var(--fz_H3);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .menu-preface {
+      grid-template-columns: 1fr;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .restaurant-kitchen-1 {
+    margin-bottom: calc(2vw + 1rem);
+  }
+}

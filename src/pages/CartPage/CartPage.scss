@@ -1,0 +1,398 @@
+.cartPage {
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0),
+    rgb(27, 27, 27),
+    rgb(48, 48, 48),
+    rgb(71, 71, 71),
+    rgb(94, 94, 94),
+    rgb(119, 119, 119),
+    rgb(145, 145, 145),
+    rgb(171, 171, 171),
+    rgb(198, 198, 198),
+    rgb(226, 226, 226),
+    rgb(255, 255, 255)
+  );
+  min-height: 99vh;
+  padding: 5vh;
+  .cartPage-title {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: calc(3vw + 2rem);
+    user-select: none;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.8px #fff;
+    margin-block: 4vh;
+    display: flex;
+    align-items: center;
+    @media (max-width: 490px) {
+      -webkit-text-stroke: 0.4px #fff;
+    }
+    .cartPage-quantity {
+      user-select: none;
+      background-color: #01bb4f;
+      color: #fff;
+      border-radius: 50%;
+      padding: 5px 10px;
+      text-shadow: 0 0 5px #004617;
+      box-shadow: 0 0 10px black;
+      font-size: calc(2vw + 1rem);
+      font-weight: 500;
+      margin-left: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: calc(2vw + 2rem);
+      height: calc(2vw + 2rem);
+    }
+  }
+
+  .cartPage-container {
+    // CartPage__list  ===============================
+    .cartPage__list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2vw;
+      margin-bottom: 2vw;
+      .cartPage__item {
+        .cartPage__item-title {
+          user-select: none;
+          background-color: rgb(2, 2, 2);
+          font-size: var(--extra_large_fz);
+          font-weight: 600;
+          letter-spacing: 3px;
+          line-height: 0.6;
+          font-family: "Herr Von Muellerhoff";
+          text-align: center;
+          padding: 3vw;
+          display: grid;
+          place-content: center;
+          color: var(--darkSand_txt_color);
+          box-shadow: 0 0 10px black;
+          @media (max-width: 768px) {
+            line-height: 1.2;
+          }
+        }
+
+        .cartPage__item-details {
+          background-color: rgb(2, 2, 2);
+          display: grid;
+          grid-template-columns: 1fr 0.4fr 1.6fr 0.5fr;
+          justify-content: space-between;
+          box-shadow: 0 0 10px black;
+          padding: 5px;
+          padding-top: 2vw;
+          .cartPage__item-image {
+            margin-right: 2vw;
+            width: 100%;
+          }
+
+          // Order quantity regulator ---------------
+          .cartPage__quantity-controls {
+            position: relative;
+            padding: 2vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 6vw;
+            .btn {
+              user-select: none;
+              font-size: calc(1vw + 1rem);
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #fff;
+              transition: 0.3s;
+              &:hover {
+                font-size: calc(1vw + 0.96rem);
+                color: #cecece;
+              }
+            }
+
+            .cartPage__quantity-controls-btn2 {
+              right: 10%;
+              background-color: gray;
+              border: 1px solid rgb(68, 68, 68);
+              box-shadow: inset 0 0 15px black;
+              transition: 0.4s;
+              &:hover {
+                border: 1px solid rgba(0, 0, 0, 1);
+                color: #01bb4f;
+              }
+            }
+
+            .cartPage__quantity-controls-btn1 {
+              left: 10%;
+              background-color: gray;
+              border: 1px solid rgb(68, 68, 68);
+              box-shadow: inset 0 0 15px black;
+              transition: 0.4s;
+              &:hover {
+                border: 1px solid rgb(0, 0, 0);
+                color: red;
+              }
+            }
+
+            .cartPage__quantity-controls-number {
+              position: absolute; // Необходим для того что бы при изменении цифр на счётчике его объём не влиял на позицию окружающих элементов
+              font-size: calc(1vw + 1rem);
+              margin-inline: calc(1.2vw + 1.2rem);
+              color: rgb(202, 158, 92);
+            }
+          }
+          @media (max-width: 767px) {
+            .cartPage__quantity-controls {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-evenly;
+              align-items: center;
+            }
+          }
+
+          .cartPage__item-price {
+            font-size: var(--fz_p);
+            letter-spacing: 1.2px;
+            text-align: center;
+            padding: 2vw;
+            color: #fff;
+            display: grid;
+            place-content: center;
+            .cartPage__item-price-block {
+              display: flex;
+              flex-direction: column;
+              align-items: start;
+              gap: 1.5vw;
+              & > *:not(:last-child) {
+                margin-bottom: 2.5vh;
+              }
+            }
+          }
+
+          @media (max-width: 767px) {
+            .cartPage__item-price {
+              margin-block: 2vw;
+              .cartPage__item-price-block {
+                gap: 0vw;
+                & > *:not(:last-child) {
+                  margin-bottom: 1vh;
+                }
+              }
+            }
+          }
+
+          .cartPage__remove-button {
+            display: grid;
+            place-content: center;
+            padding-inline: 2vw;
+            .remove-el {
+              user-select: none;
+              border-radius: 50%;
+              width: 35px;
+              height: 35px;
+              background-color: red;
+              border: 1px solid #850a0a;
+              place-items: center;
+              display: grid;
+              place-items: center;
+              box-shadow: inset 0 0 8px rgb(54, 9, 9);
+              transition: 0.2s;
+              color: #fff;
+              &:hover {
+                box-shadow: inset 0 0 15px rgb(59, 16, 16);
+                border: 1px solid black;
+                color: #b6b6b6;
+              }
+            }
+          }
+          @media (max-width: 767px) {
+            .cartPage__remove-button {
+              margin-bottom: 4vw;
+            }
+          }
+        }
+        @media (max-width: 767px) {
+          .cartPage__item-details {
+            grid-template-columns: 1fr;
+          }
+          .cartPage__item-details .cartPage__item-image {
+            width: 100%;
+            margin: 0;
+            margin-block: 3vw;
+          }
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      .cartPage__list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 539px) {
+      .cartPage__list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    //   cartPage-summary  ===================
+    .cartPage-summary {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+      padding: 3vw;
+      color: #fff;
+      width: fil-content; /* Сжимаем элемент вокруг содержимого */
+      margin: 0 auto;
+      border-radius: 20px;
+      background: linear-gradient(
+        to bottom,
+        rgb(27, 27, 27),
+        rgb(48, 48, 48),
+        rgb(71, 71, 71),
+        rgb(94, 94, 94),
+        rgb(119, 119, 119),
+        rgb(145, 145, 145)
+      );
+      .cartPage__summary-item {
+        text-shadow: 0 0 3px black;
+        font-size: calc(1vw + 0.6rem);
+        letter-spacing: 1.2px;
+        font-weight: 100;
+      }
+
+      .cartPage__summary-item:not(:last-child) {
+        margin-bottom: 1vh;
+      }
+    }
+  }
+
+  //  Оформление заказа - Checkout section
+
+  .checkout-section {
+    margin-top: 3vw;
+    border-radius: 20px;
+    color: #fff;
+    padding: 5vw;
+    background: linear-gradient(
+      to bottom,
+      rgb(20, 20, 20),
+      rgb(48, 48, 48),
+      rgb(61, 61, 61),
+      rgb(68, 68, 68),
+      rgb(61, 61, 61),
+      rgb(48, 48, 48),
+      rgb(20, 20, 20)
+    );
+    .checkout-section__title {
+      text-align: center;
+      padding-block: 3vw;
+    }
+    .checkout-form {
+      display: flex;
+      flex-direction: column;
+
+      .form-group {
+        margin-bottom: 7px;
+        border-bottom: 1px dashed #fff;
+        label {
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        input {
+          width: 100%;
+          padding: 8px;
+          box-sizing: border-box;
+        }
+
+        .error-message {
+          color: #f44336;
+          font-size: 12px;
+          margin-top: 5px;
+        }
+      }
+
+      .checkout-button {
+        margin-top: 2vw;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .checkout-button:hover {
+        background-color: #45a049;
+      }
+    }
+  }
+
+  .order-status {
+    padding: 10px;
+    margin-top: 10px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+
+    &.success {
+      background-color: #4caf50;
+    }
+
+    &.error {
+      background-color: #f44336;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .cartPage {
+    padding: 2vh;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-text-fill-color: #fff;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Стили для Firefox */
+input:-moz-autofill,
+textarea:-moz-autofill,
+select:-moz-autofill {
+  box-shadow: 0 0 0px 1000px transparent inset;
+  -moz-text-fill-color: #fff;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.form-group {
+  position: relative;
+  min-height: 3rem; /* Установите минимальную высоту, которая соответствует вашей форме */
+}
+
+/* Стиль для сообщений об ошибках */
+.error-message {
+  position: absolute;
+  bottom: 0rem; /* Отступ от нижней границы поля ввода */
+  left: 0;
+  color: rgb(231, 103, 18);
+  font-size: 0.875rem; /* Размер шрифта для сообщений об ошибках */
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+.form-group .error-message.visible {
+  opacity: 1;
+}

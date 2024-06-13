@@ -1,0 +1,12 @@
+@import "../../General_Menu_Styles.scss";
+@import "../../../../assets/globalStyles.scss";
+
+.traditional-drinks {
+  @include main-menu;
+
+  .traditional-drinks__title {
+    @include items-title;
+  }
+
+  @include mySwiper;
+}

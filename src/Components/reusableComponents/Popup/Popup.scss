@@ -1,0 +1,58 @@
+.popup {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 4;
+
+  .popup-wrapper {
+    display: grid;
+    place-items: center;
+    background-image:  url(../../../assets/image/basket_empty_1.webp);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+
+    .popup-content {
+      background: transparent;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .popup-close-button {
+      user-select: none;
+       .popup-close-button-img{
+        box-shadow: none;
+        border: none ;
+        width: 3em;
+        height: 3em;
+        transition: .3s;
+        &:hover{
+          width: 3.5em;
+          height: 3.5em;
+        }
+       }
+    }
+    .basket-empty{
+      font-size: calc(1vw + 1em);
+      text-transform: uppercase;
+      text-shadow: 0 0 3px black;
+      user-select: none;
+    }
+  }
+}
+// @media (max-width: 1280px) {
+//   .popup {
+//     background: url(../../../assets/image/basket_empty_3.webp);
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//   }
+
+// }

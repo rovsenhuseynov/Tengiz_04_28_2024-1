@@ -1,0 +1,166 @@
+.contactForm {
+  display: flex;
+  justify-content: right;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0) 70px
+    ),
+    url(../../../assets/image/ContactUsForm.svg);
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-color: rgb(252, 252, 252);
+  padding-inline: 5vw;
+  padding-block: 7vh;
+  margin-top: 3.5vh;
+  .contactForm__container {
+    .my-form {
+      padding-block: calc(1.5vw + 1.5rem);
+      padding-inline: calc(0.5vw + 0.5rem);
+      border: 1px solid #8a8a8a;
+      user-select: none;
+      border-radius: calc(0.8vw + 0.4rem);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+      background-color: rgba(125, 124, 129, 0.5);
+    }
+
+    .form-1 {
+      position: relative;
+      margin-bottom: 0px;
+      max-width: 90vw;
+
+      .error-space {
+        height: 20px; // фиксированное пространство для ошибок
+      }
+
+      .gt-input {
+        width: 45vw;
+        min-width: 300px;
+        height: 50px;
+        padding: 0 20px;
+        font-size: var(--fz_p);
+        position: relative;
+        background-color: transparent;
+        color: #000;
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+          background-color: rgba(121, 121, 121, 0.5) !important;
+          // color: #fff !important;
+          box-shadow: 0 0 10px 1000px transparent inset !important;
+          // -webkit-text-fill-color: #fff !important;
+          transition: background-color 5000s ease-in-out 0s;
+        }
+      }
+      @media (max-width: 912px) {
+        .gt-input {
+          width: 85vw;
+        }
+      }
+
+      .dividing-line {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          background: radial-gradient(
+            ellipse at center,
+            rgba(255, 255, 255, 0.8) 0%,
+            rgba(255, 255, 255, 0) 70%
+          );
+        }
+      }
+
+      .gt-text {
+        padding: 15px 20px;
+        height: 100px;
+        width: 100%;
+        background-color: transparent;
+        color: #000;
+      }
+
+      .gt-input:focus {
+        outline: none;
+      }
+
+      label {
+        position: absolute;
+        font-size: 18px;
+        transition: all 0.25s;
+        top: 25px;
+        transform: translateY(-50%);
+        margin-left: 24px;
+        cursor: text;
+        z-index: 1;
+        color: #fff;
+        &:hover {
+          font-size: 18px;
+          background: rgb(231, 103, 18);
+          border: 0.5px solid rgba(96, 151, 18, 0.6);
+          border-radius: 10px 0;
+          color: #fff;
+          padding: 2px 6px;
+          padding-left: 10px;
+          min-width: 100px;
+          text-align: start;
+          text-shadow: 0 0 1px black;
+          box-shadow: 0 0 5px rgb(70, 70, 70);
+        }
+      }
+
+      .error {
+        color: rgb(231, 103, 18);
+        text-shadow: 0 0 2px black;
+        font-size: 1.1em;
+        margin-top: 5px;
+        margin-left: 24px;
+      }
+    }
+
+    .btn {
+      width: 100%;
+      height: calc(2vw + 1rem);
+      font-size: var(--fz_H4);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: white;
+      text-shadow: 0 0 4px black;
+      border-radius: 30px;
+      transition: 0.4s;
+      margin-top: 2vh;
+      cursor: pointer;
+      font-family: "Courier New", Courier, monospace;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .move-up {
+      margin-top: -30px;
+      margin-left: 0;
+      font-size: 18px;
+      background: rgb(231, 103, 18);
+      border: 0.5px solid rgba(96, 151, 18, 0.6);
+      border-radius: 10px 0;
+      color: #fff;
+      padding: 2px 6px;
+      padding-left: 10px;
+      min-width: 100px;
+      text-align: start;
+      text-shadow: 0 0 1px black;
+      box-shadow: 0 0 5px rgb(70, 70, 70);
+    }
+  }
+}
+@media (max-width: 912px) {
+  .contactForm {
+    justify-content: center;
+  }
+}

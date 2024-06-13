@@ -1,0 +1,70 @@
+@import "../../../assets/globalStyles.scss";
+
+.delicacy {
+  margin: 5vw;
+  .delicacy__container {
+    display: grid;
+    gap: 5vw;
+    grid-template-columns: 1fr 1.4fr;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+
+    .delicacy__text {
+      user-select: none;
+      text-align: center;
+      margin-bottom: calc(2vw + 1rem);
+
+      .delicacy__logo {
+        margin-bottom: calc(1.4vw + 0.6rem);
+
+        .delicacy__logo-title {
+          font-family: "Herr Von Muellerhoff", cursive;
+          font-size: calc(6vw + 3rem);
+          font-weight: 500;
+          text-align: center;
+          color: var(--darkSand_txt_color);
+          line-height: 30px;
+          margin-top: calc(2vw + 1.7rem);
+          text-shadow: 1px 1px 3px rgb(46, 46, 46);
+        }
+        .delicacy__logo-subtitle {
+          font-size: calc(3vw + 1.5rem);
+          font-weight: 700;
+          text-shadow: 1px 1px 4px rgb(46, 46, 46);
+          text-transform: uppercase;
+        }
+      }
+
+      .decorative-divider {
+        font-size: calc(1vw + 0.5rem);
+        margin-bottom: calc(1.4vw + 0.6rem);
+      }
+
+      .delicacy__text-p {
+        font-size: var(--fz_p);
+        text-wrap: balance;
+        margin-bottom: calc(1.6vw + 0.8rem);
+        color: var(--dark_white);
+        font-weight: 300;
+      }
+
+      @include button-styles-with-underline;
+    }
+
+    .delicacy__block-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: calc(1.4vw + 0.7rem);
+      .delicacy__block-img {
+        box-shadow: 0 0 12px black;
+        transition: transform 0.3s;
+        overflow: hidden;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  margin-left: calc(1vw + 0.5rem);
+  margin-right: calc(1vw + 0.5rem);
+}
+
+// Font size
+:root {
+  --decorative_font: calc(4vw + 0.4rem);
+  --extra_large_fz: calc(2.6vw + 1.3rem);
+  --fz_H1: calc(2vw + 1rem);
+  --fz_H2: calc(1.4vw + 1rem);
+  --fz_H3: calc(1vw + 1rem);
+  --fz_H4: calc(0.8vw + 1rem);
+  --fz_H5: calc(0.4vw + 1rem);
+  --fz_H6: calc(0.2vw + 1rem);
+  --fz_p: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
+
+  --fz_BTN: calc(0.6vw + 0.6rem);
+}
+
+// Text color
+:root {
+  --brown_txt_color: rgb(65, 57, 53);
+  --white_txt_color: rgb(255, 255, 255);
+  --black_txt_color: rgb(0, 0, 0);
+  --darkSand_txt_color: rgb(202, 158, 92);
+  --lineColor: rgb(158, 107, 30);
+  --dark_white: rgb(163, 163, 163);
+}
+
+// background color
+:root {
+  --orange_bg_color: rgb(214, 81, 41);
+  --light_beige_color: rgb(231, 228, 220);
+  --light2_beige_color: rgb(232, 223, 196);
+
+  --green_color: rgb(0, 128, 0);
+}
+
+//  -------------- Mixins ----------------------
+
+@mixin button-styles-with-underline {
+  .link-to {
+    color: darken(#c59d5f, 30%);
+    font-size: var(--fz_H5);
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.4s;
+    user-select: none;
+    font-weight: 500;
+    margin-bottom: calc(2vw + 1rem);
+    &:hover {
+      color: var(--darkSand_txt_color);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #c59d5f;
+      transition: transform 0.3s ease;
+      transform: scaleX(1); /* Изначально линия видима */
+    }
+
+    &:hover::after {
+      transform: scaleX(0.001); /* При наведении сворачиваем линию влево */
+    }
+
+    &.active::after {
+      transform: scaleX(0); /* В состоянии active линия должна быть видимой */
+    }
+  }
+}
