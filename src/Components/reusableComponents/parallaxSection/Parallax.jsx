@@ -96,7 +96,7 @@ function Parallax({
       const rect = parallaxElement.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       const middleOfWindow = windowHeight / 7;
-      const parallaxSpeed = 0.14; // Adjust the speed factor as needed
+      const parallaxSpeed = 0; // Adjust the speed factor as needed
 
       // Calculate the background position based on the element's position in the viewport
       const backgroundPosY = (middleOfWindow - rect.top) * parallaxSpeed;
