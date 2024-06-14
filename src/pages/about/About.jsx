@@ -1,3 +1,27 @@
+// import React from "react";
+// import "./About.scss";
+// import "../../assets/globalStyles.scss";
+// import Intermediate from "./intermediate/Intermediate";
+// import PhotoSlider from "./PhotoSlider/PhotoSlider";
+// import AboutBanner from "./AboutBanner/AboutBanner";
+// import AboutWelcome from "./AboutWelcome/AboutWelcome";
+
+// function About() {
+//   return (
+//     <div className="about__wrapper">
+//       <AboutBanner />
+//       <AboutWelcome />
+//       <PhotoSlider />
+//       <Intermediate />
+//     </div>
+//   );
+// }
+
+// export default About;
+
+
+
+
 import React from "react";
 import "./About.scss";
 import "../../assets/globalStyles.scss";
@@ -13,7 +37,6 @@ import {
 } from "../../Components/reusableComponents/DataBox/AboutData";
 import ScrollToTop from "../../Components/reusableComponents/ScrollToTop/ScrollToTop";
 import PhotoSlider from "./PhotoSlider/PhotoSlider";
-
 
 const BenefitSection = ({ icon, title, items }) => (
   <div className="about">
@@ -73,12 +96,17 @@ const About = () => (
         ))}
       </div>
 
+
+
+
       <div className="reasons-choice">
         <h3 className="reasons-choice__title">But that is not all!</h3>
+
         <h4 className="reasons-choice__subtitle">
           Here are some reasons why Best Food in Azerbaijan is your ideal
           choice:
         </h4>
+
         <div className="reasons-choice__contecst-block">
           <ul className="reasons-choice__list">
             {reasons.map((reason, index) => (
@@ -96,7 +124,8 @@ const About = () => (
         </div>
       </div>
     </div>
-    <PhotoSlider/>
+
+    <PhotoSlider />
     <Intermediate />
     <ScrollToTopButton />
   </div>

@@ -5,7 +5,8 @@ import { intermediateContent } from "../../../Components/reusableComponents/Data
 
 function Intermediate() {
   return (
-    <div className="intermediate">
+    <div className="intermediate ">
+      
       <div className="intermediate__head">
         <img
           src={cooking}

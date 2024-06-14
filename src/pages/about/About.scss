@@ -1,3 +1,11 @@
+// @import "../../assets/globalStyles.scss";
+
+// .about__wrapper {
+//   background-color: #fff;
+//   display: flex;
+//   flex-direction: column;
+// }
+
 @import "../../assets/globalStyles.scss";
 
 .about__wrapper {
@@ -21,13 +29,13 @@
       user-select: none;
       margin: 0.1vw 6vw 0 0;
       .about__banner-title {
-        color: rgba(255, 255, 255, .3);
-        font-size: calc(5.7vw + .5rem);
+        color: rgba(255, 255, 255, 0.3);
+        font-size: calc(5.7vw + 0.5rem);
 
         text-transform: uppercase;
-        -webkit-text-stroke: .6px #fff;
+        -webkit-text-stroke: 0.6px #fff;
         @media (max-width: 490px) {
-          -webkit-text-stroke: .4px #fff;
+          -webkit-text-stroke: 0.4px #fff;
         }
       }
       .about__banner-subtext {
@@ -65,15 +73,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    aspect-ratio: 1920/2731;
+    // aspect-ratio: 1920/2731;
     padding-block: calc(1.6vw + 0.8rem);
-    // box-shadow: inset 0px 30px 30px -30px rgba(0, 0, 0, 0.8),
-    //   inset 0px 90px 90px -90px rgba(0, 0, 0, 0.5),
-    //   inset 0px 120px 120px -120px rgba(0, 0, 0, 0.2),
-    //   inset 0px -30px 30px -30px rgba(0, 0, 0, 0.6),
-    //   inset 0px -90px 90px -90px rgba(0, 0, 0, 0.4),
-    //   inset 0px -120px 120px -120px rgba(0, 0, 0, 0.2);
-
     padding: 5vw 5vw;
     .about__welcome-block {
       text-align: center;
@@ -102,6 +103,7 @@
       gap: calc(1vw + 0.5rem);
       color: var(--brown_txt_color);
       margin-bottom: calc(3vw + 1.5rem);
+
       .about {
         min-width: 250px;
         margin-bottom: calc(1vw + 0.5rem);
@@ -170,7 +172,7 @@
           .reasons-choice__list-element {
             color: var(--brown_txt_color);
             margin-bottom: calc(1.6vw + 0.8rem);
-            list-style: none; 
+            list-style: none;
             counter-increment: my-counter; /* Увеличиваем счетчик */
 
             .reasons-choice__list-element-title {
@@ -202,11 +204,12 @@
           aspect-ratio: 327/500;
         }
       }
+
       @media (max-width: 768px) {
         .reasons-choice__contecst-block {
           display: grid;
           grid-template-columns: 1fr;
-          align-items: center; 
+          align-items: center;
           justify-items: center;
           .reasons-choice__list {
             .reasons-choice__list-element {
