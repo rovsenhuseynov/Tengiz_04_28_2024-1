@@ -31,7 +31,7 @@ const MenuItem = ({ item, openPopup }) => {
               <p className="price-text">Price</p>
 
               <div className="dots">
-                {Array.from({ length: 20 }, (_, index) => (
+                {Array.from({ length: 14 }, (_, index) => (
                   <span key={index} className="dot"></span>
                 ))}
               </div>
