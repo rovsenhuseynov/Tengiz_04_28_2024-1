@@ -1,13 +1,53 @@
+// .parallax-wrapper {
+//   background-attachment: fixed;
+//   background-position: center center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 70vh;
+//   position: relative;
+//   .parallax__content {
+//     z-index: 3;
+//     text-align: center;
+//     text-shadow: 1px 1px 20px black;
+//     .parallax__title-italics {
+//       color: var(--darkSand_txt_color);
+//       line-height: 40px;
+//       font-family: "Herr Von Muellerhoff", cursive;
+//       font-size: calc(5vw + 4rem);
+//       font-weight: 500;
+//     }
+//     .parallax__title {
+//       color: #fff;
+//       font-size: calc(4vw + 1rem);
+//       font-weight: 600;
+//       text-transform: uppercase;
+//     }
+//   }
+//   .mask {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//     width: 100%;
+//     background: rgba(0, 0, 0, .2);
+//     z-index: 2;
+//   }
+// }
+
+
 .parallax-wrapper {
-  background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 80vh;
   position: relative;
+  overflow: hidden; /* Предотвращает выход контента за пределы блока */
   .parallax__content {
     z-index: 3;
     text-align: center;
