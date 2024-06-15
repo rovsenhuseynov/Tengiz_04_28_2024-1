@@ -1,7 +1,6 @@
 import React from "react";
 import "./AboutBanner.scss";
 import { Link } from "react-router-dom";
-import ScrollDownButton from "../../../Components/reusableComponents/ScrollDownButton/ScrollDownButton";
 import NavLinkBtn from "../../../Components/reusableComponents/Btn/NavLinkBtn";
 
 function AboutBanner() {
@@ -14,7 +13,6 @@ function AboutBanner() {
           <NavLinkBtn text="ORDER NOW" className="about__nav-link-btn" />
         </Link>
       </div>
-      <ScrollDownButton targetSelector=".next-section" />
     </div>
   );
 }
