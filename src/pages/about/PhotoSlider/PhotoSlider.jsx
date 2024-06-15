@@ -9,7 +9,7 @@ function PhotoSlider() {
     "https://www.advantour.com/img/azarbaijan/dishes/azerbaijani-dishes.jpg",
     "https://www.advantour.com/img/azarbaijan/dishes/pakhlava.jpg",
     "https://assets.jintravel.com/files/upload/jintravel/azerb%20food/xengel-azerbaijani-food-dish-cuisine-azerbaycan-metbexi-kuxnya-qastrotur-jintravel.com.jpg",
-    "https://assets.jintravel.com/files/upload/jintravel/azerb%20food/dovga-azerbaijani-food-dish-cuisine-azerbaycan-metbexi-kuxnya-qastrotur-jintravel.com.JPG",
+    "https://blog.russianfoods.com/wp-content/uploads/2012/01/Dovga-With-Meat-1-800x534.jpg",
   ];
 
   useEffect(() => {
