@@ -3,22 +3,7 @@
 .about__wrapper {
   .about__content {
     // background-image: url(../../assets/image/Paper_texture.webp);
-    background: linear-gradient(
-      to right,
-      rgb(189, 189, 189) 0%,
-
-      rgb(206, 206, 206) 5%,
-
-      rgb(232, 232, 232) 30%,
-
-      rgb(240, 240, 240) 50%,
-
-      rgb(232, 232, 232) 70%,
-
-      rgb(206, 206, 206) 95%,
-
-      rgb(189, 189, 189) 100%
-    );
+    background: rgb(23,23,23);
     height: 100vh;
     height: 100%;
     padding-block: calc(1.6vw + 0.8rem);
@@ -28,16 +13,16 @@
       color: var(--brown_txt_color);
       margin-bottom: calc(3vw + 1.5rem);
       .about__welcome-block-title {
-        font-weight: 800;
         font-size: var(--fz_H2);
         margin-bottom: calc(1.6vw + 0.8rem);
         text-shadow: 1px 1px 2px black;
         font-weight: 500;
-        color: #000;
+        color: #fff;
       }
       .about__welcome-block-subtitle-list {
         font-size: var(--fz_H3);
         font-weight: 500;
+        color: var(--dark_white);
         .about__welcome-block-subtitle-list-elem {
           margin-bottom: calc(1vw + 0.5rem);
         }
@@ -76,11 +61,14 @@
           .about__title {
             font-size: var(--fz_H3);
             text-align: center;
+            color: var(--darkSand_txt_color);
+            font-weight: 400;
           }
         }
         .about__list {
           .about__list-elem {
             font-size: var(--fz_p);
+            color: var(--dark_white);
             &::before {
               content: "\2713"; /* Юникод символ галочки */
               color: var(--green_color);
@@ -93,16 +81,21 @@
       }
     }
 
+
+//------------------------------------------
+
     .reasons-choice {
       .reasons-choice__title {
         text-align: center;
         margin-bottom: calc(1vw + 0.5rem);
         font-size: var(--fz_H2);
-        color: var(--brown_txt_color);
+        font-weight: 500;
+        color: #fff;
       }
       .reasons-choice__subtitle {
         text-align: center;
-        color: var(--brown_txt_color);
+        color: var(--dark_white);
+        font-weight: 500;
         font-size: var(--fz_H4);
         margin-bottom: calc(1vw + 0.5rem);
       }
@@ -117,19 +110,21 @@
           margin-top: calc(1vw + 0.5rem);
 
           .reasons-choice__list-element {
-            color: var(--brown_txt_color);
             margin-bottom: calc(1.6vw + 0.8rem);
             list-style: none;
             counter-increment: my-counter; /* Увеличиваем счетчик */
 
             .reasons-choice__list-element-title {
               font-size: var(--fz_H4);
-              font-weight: 500;
+              font-weight: 400;
               line-height: 0.5;
+              color: var(--darkSand_txt_color);
+             
             }
             .reasons-choice__list-element-text {
               margin-top: calc(0.4vw + 0.3rem);
               font-size: var(--fz_p);
+              color: var(--dark_white);
             }
           }
           li::before {
@@ -161,9 +156,6 @@
           .reasons-choice__list {
             .reasons-choice__list-element {
               margin-bottom: 10px;
-              .reasons-choice__list-element-title {
-                font-weight: 600;
-              }
             }
           }
           .reasons-choice__img {
