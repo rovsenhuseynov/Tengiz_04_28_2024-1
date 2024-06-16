@@ -2,14 +2,12 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  // background-size: 105% !important;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80vh;
   position: relative;
   overflow: hidden;
-
   background-color: #ff0303;
 
   .parallax__content {
@@ -41,13 +39,5 @@
   }
 }
 
-.parallax-wrapper {
-  background-size: cover !important; // Размер по умолчанию
-}
 
-.parallax-wrapper {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover; /* Это значение должно быть переопределено через JS */
-}
+
