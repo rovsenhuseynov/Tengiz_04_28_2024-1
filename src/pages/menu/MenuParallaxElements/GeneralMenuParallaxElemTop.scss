@@ -1,19 +1,18 @@
 .menuParallaxElem-final {
   user-select: none;
   position: relative;
-
   .final__nav-link {
     position: absolute;
     left: 50%;
-    top: 75%;
+    top: 70%;
     transform: translate(-50%, -50%);
     z-index: 2;
   }
 }
 
 .restaurant-kitchen-1 {
-  max-height: calc(20vh + 20rem);
   user-select: none;
+  height: 80vh;
 }
 .restaurant-kitchen-1::before {
   content: "";

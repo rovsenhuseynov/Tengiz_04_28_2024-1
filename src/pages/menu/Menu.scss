@@ -1,6 +1,7 @@
 .menu {
   color: #fff;
   margin-bottom: calc(3vw + 1.5rem);
+
   .menu__head {
     background: url(../../assets/image/max.svg);
     background-position: center;
@@ -35,6 +36,7 @@
     .home__wrapper-subtext {
       color: #fff;
       font-size: var(--fz_H3);
+      
     }
   }
 
