@@ -582,8 +582,8 @@ export const getScreenConfig = (width, height) => {
       minHeight: 1920,
       maxHeight: 1920,
       speed: 0.15,
-      offset: -150,
-      backgroundSize: "320%",
+      offset: -145,
+      backgroundSize: "317%",
     },
     {
       minWidth: 1024,
