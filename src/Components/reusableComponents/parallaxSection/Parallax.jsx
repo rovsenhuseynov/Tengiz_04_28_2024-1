@@ -92,13 +92,6 @@
 
 // export default Parallax;
 
-
-
-
-
-
-
-
 import React, { useEffect, useRef, useState } from "react";
 import "./parallax.scss";
 import { getScreenConfig } from "./GetScreenConfig";
