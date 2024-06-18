@@ -5,11 +5,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 60vh;
   position: relative;
   overflow: hidden;
-  background-color: #ff0303;
-  
+  background-color: red;
+
   .parallax__content {
     z-index: 3;
     text-align: center;

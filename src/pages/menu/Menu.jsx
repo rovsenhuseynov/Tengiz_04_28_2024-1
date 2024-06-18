@@ -16,7 +16,7 @@ import MenuParallaxElemThird from "./MenuParallaxElements/MenuParallaxElemThird"
 import MenuParallaxElemFourth from "./MenuParallaxElements/MenuParallaxElemFourth";
 import MenuParallaxElemFinal from "./MenuParallaxElements/MenuParallaxElemFinal";
 import ScrollToTop from "../../Components/reusableComponents/ScrollToTop/ScrollToTop";
-import SimpleParallax from "../../Components/reusableComponents/SimpleParallax/SimpleParallax";
+
 
 const Menu = () => {
   return (
@@ -32,7 +32,7 @@ const Menu = () => {
       <ChefsSection />
     
       <DividerLine />
-      {/* <SimpleParallax/> */}
+
       <MenuParallaxElemTop />
     
       <MenuSalads />
