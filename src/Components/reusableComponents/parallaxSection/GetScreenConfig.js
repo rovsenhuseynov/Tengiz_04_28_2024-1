@@ -63,6 +63,24 @@ export const getScreenConfig = (width, height) => {
       backgroundSize: "120%",
     },
 
+    
+   
+
+    // Условия для экранов шириной 1080 пикселей и высотой 1920 пикселей
+    {
+      minWidth: 1080,
+      maxWidth: 1080,
+      minHeight: 1920,
+      maxHeight: 1920,
+      speed: 0.15,
+      offset: -50,
+      backgroundSize: "150%",
+    },
+
+
+
+
+
     // Остальные конфигурации
     {
       minWidth: 912,
