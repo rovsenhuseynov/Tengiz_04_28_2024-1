@@ -76,39 +76,3 @@ function ParallaxElementFirst() {
 
 export default ParallaxElementFirst;
 
-
-
-
-// import React, { useEffect, useState } from "react";
-// import Parallax from "../../../Components/reusableComponents/parallaxSection/Parallax";
-// import bgImage from "../../../assets/image/0_66/R.webp";
-
-// function ParallaxElementFirst() {
-//   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1280);
-
-//   useEffect(() => {
-//     const handleResize = () => {
-//       setIsLargeScreen(window.innerWidth > 1280);
-//     };
-
-//     window.addEventListener("resize", handleResize);
-
-//     // Initial check
-//     handleResize();
-
-//     return () => {
-//       window.removeEventListener("resize", handleResize);
-//     };
-//   }, []);
-
-//   return (
-//     <Parallax
-//       backgroundImage={bgImage}
-//       titleItalic="Tasteful"
-//       title="Recipes"
-//       isLargeScreen={isLargeScreen} // передаем состояние isLargeScreen
-//     />
-//   );
-// }
-
-// export default ParallaxElementFirst;

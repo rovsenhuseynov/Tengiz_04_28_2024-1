@@ -9,15 +9,17 @@ export const getScreenConfig = (width, height) => {
       offset: -350,
       backgroundSize: "120%",
     },
+
     {
       minWidth: 1280,
       maxWidth: 1919,
       minHeight: 0,
       maxHeight: Infinity,
-      speed: 0.17,
-      offset: -75,
-      backgroundSize: "135%",
+      speed: 0.15,
+      offset: -65,
+      backgroundSize: "130%",
     },
+
     {
       minWidth: 1440,
       maxWidth: 1919,
@@ -27,6 +29,7 @@ export const getScreenConfig = (width, height) => {
       offset: 185,
       backgroundSize: "100%",
     },
+
     {
       minWidth: 1280,
       maxWidth: 1439,
@@ -36,6 +39,7 @@ export const getScreenConfig = (width, height) => {
       offset: 120,
       backgroundSize: "100%",
     },
+
     {
       minWidth: 1080,
       maxWidth: 1080,
@@ -45,6 +49,7 @@ export const getScreenConfig = (width, height) => {
       offset: -145,
       backgroundSize: "190%",
     },
+
     {
       minWidth: 1024,
       maxWidth: 1279,
@@ -54,6 +59,7 @@ export const getScreenConfig = (width, height) => {
       offset: -100,
       backgroundSize: "245%",
     },
+
     {
       minWidth: 1024,
       maxWidth: 1279,
@@ -63,6 +69,7 @@ export const getScreenConfig = (width, height) => {
       offset: -100,
       backgroundSize: "120%",
     },
+
     {
       minWidth: 912,
       maxWidth: 1023,
@@ -72,6 +79,7 @@ export const getScreenConfig = (width, height) => {
       offset: -105,
       backgroundSize: "260%",
     },
+
     {
       minWidth: 853,
       maxWidth: 911,
@@ -81,6 +89,7 @@ export const getScreenConfig = (width, height) => {
       offset: -100,
       backgroundSize: "280%",
     },
+
     {
       minWidth: 820,
       maxWidth: 852,
@@ -90,6 +99,7 @@ export const getScreenConfig = (width, height) => {
       offset: -90,
       backgroundSize: "265%",
     },
+
     {
       minWidth: 768,
       maxWidth: 819,
@@ -99,6 +109,7 @@ export const getScreenConfig = (width, height) => {
       offset: -105,
       backgroundSize: "250%",
     },
+
     {
       minWidth: 540,
       maxWidth: 767,
@@ -108,6 +119,7 @@ export const getScreenConfig = (width, height) => {
       offset: -55,
       backgroundSize: "240%",
     },
+
     {
       minWidth: 430,
       maxWidth: 539,
@@ -117,6 +129,7 @@ export const getScreenConfig = (width, height) => {
       offset: -75,
       backgroundSize: "390%",
     },
+
     {
       minWidth: 412,
       maxWidth: 429,
@@ -126,6 +139,7 @@ export const getScreenConfig = (width, height) => {
       offset: -55,
       backgroundSize: "380%",
     },
+
     {
       minWidth: 414,
       maxWidth: 411,
@@ -135,6 +149,7 @@ export const getScreenConfig = (width, height) => {
       offset: -60,
       backgroundSize: "370%",
     },
+
     {
       minWidth: 390,
       maxWidth: 413,
@@ -144,6 +159,7 @@ export const getScreenConfig = (width, height) => {
       offset: -60,
       backgroundSize: "365%",
     },
+
     {
       minWidth: 375,
       maxWidth: 389,
@@ -153,6 +169,7 @@ export const getScreenConfig = (width, height) => {
       offset: -40,
       backgroundSize: "305%",
     },
+
     {
       minWidth: 360,
       maxWidth: 374,
@@ -162,6 +179,7 @@ export const getScreenConfig = (width, height) => {
       offset: -38,
       backgroundSize: "340%",
     },
+
     {
       minWidth: 344,
       maxWidth: 359,
@@ -170,7 +188,7 @@ export const getScreenConfig = (width, height) => {
       speed: 0.1,
       offset: -47,
       backgroundSize: "420%",
-    },
+    }
   ];
 
   // Находим конфигурацию, которая подходит для текущего размера экрана
