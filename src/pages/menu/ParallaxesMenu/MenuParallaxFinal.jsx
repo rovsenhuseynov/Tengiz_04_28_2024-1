@@ -1,19 +1,47 @@
-import React from 'react'
-import ParallaxComponent from '../../../Components/reusableComponents/ParallaxComponent/ParallaxComponent';
-import MenuParallaxFinalImage from "../../../assets/image/restaurant_kitchen_5.webp"
+// import React from "react";
+// import ParallaxComponent from "../../../Components/reusableComponents/ParallaxComponent/ParallaxComponent";
+// import MenuParallaxFinalImage from "../../../assets/image/restaurant_kitchen_5.webp";
+
+// const MenuParallaxFinal = () => {
+//   return (
+//     <div className="menu-parallaxComponents">
+//       <div className="mask"></div>
+//       <ParallaxComponent
+//         backgroundImage={MenuParallaxFinalImage} // Укажите путь к вашему изображению
+//         title=""
+//         text="Make"
+//         subtext="a reservation"
+        
+//       />
+     
+//     </div>
+//   );
+// };
+
+// export default MenuParallaxFinal;
+
+
+
+
+import React from "react";
+import ParallaxComponent from "../../../Components/reusableComponents/ParallaxComponent/ParallaxComponent";
+import MenuParallaxFinalImage from "../../../assets/image/restaurant_kitchen_5.webp";
 
 const MenuParallaxFinal = () => {
-    return (
-      <div className="menu-parallaxTop ">
-        <div className="mask"></div>
-        <ParallaxComponent
-          backgroundImage={MenuParallaxFinalImage} // Укажите путь к вашему изображению
-          title="Kitchen"
-          text="professionals"
-        />
-      </div>
-    );
-  };
-  
+  const showReservationLink = true;  // Здесь можно установить нужное значение
+
+  return (
+    <div className="menu-parallaxComponents">
+      <div className="mask"></div>
+      <ParallaxComponent
+        backgroundImage={MenuParallaxFinalImage}  // Укажите путь к вашему изображению
+        title=""
+        text="Make"
+        subtext="a reservation"
+        showReservationLink={showReservationLink}  // Передача пропа
+      />
+    </div>
+  );
+};
 
 export default MenuParallaxFinal;

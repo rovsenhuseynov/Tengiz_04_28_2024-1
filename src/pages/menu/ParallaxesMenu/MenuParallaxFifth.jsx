@@ -5,12 +5,13 @@ import MenuParallaxFifthImage from "../../../assets/image/restaurant_kitchen_6.w
 
 const MenuParallaxFifth = () => {
   return (
-    <div className="menu-parallaxTop ">
+    <div className="menu-parallaxComponents">
       <div className="mask"></div>
       <ParallaxComponent
         backgroundImage={MenuParallaxFifthImage} // Укажите путь к вашему изображению
-        title="Chefs"
-        text="create"
+        title="Variety"
+        text="of drinks"
+       
       />
     </div>
   );

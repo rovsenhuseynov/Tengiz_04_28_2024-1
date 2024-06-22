@@ -1,10 +1,10 @@
 import React from 'react'
-import ParallaxComponent from '../../../../Components/reusableComponents/ParallaxComponent/ParallaxComponent';
-import ParallaxThirdImage from "../../../../assets/image/restaurant_kitchen_3.webp"
+import ParallaxComponent from '../../../Components/reusableComponents/ParallaxComponent/ParallaxComponent';
+import ParallaxThirdImage from "../../../assets/image/restaurant_kitchen_3.webp"
 
 const MenuParallaxThird = () => {
     return (
-      <div className="menu-parallaxTop ">
+      <div className="menu-parallaxComponents ">
         <div className="mask"></div>
         <ParallaxComponent
           backgroundImage={ParallaxThirdImage} // Укажите путь к вашему изображению

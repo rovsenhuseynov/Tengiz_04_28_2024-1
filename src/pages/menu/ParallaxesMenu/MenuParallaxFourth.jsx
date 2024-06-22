@@ -4,7 +4,7 @@ import MenuParallaxFourthImage from "../../../assets/image/restaurant_kitchen_4.
 
 const MenuParallaxFourth = () => {
   return (
-    <div className="menu-parallaxTop ">
+    <div className="menu-parallaxComponents ">
       <div className="mask"></div>
       <ParallaxComponent
         backgroundImage={MenuParallaxFourthImage} // Укажите путь к вашему изображению
