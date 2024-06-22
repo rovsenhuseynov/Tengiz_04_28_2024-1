@@ -1,50 +1,38 @@
 import React from "react";
-import "./Menu.scss";
-import { NavLink } from "react-router-dom";
-import NavLinkBtn from "../../Components/reusableComponents/Btn/NavLinkBtn";
 import ChefsSection from "./ChefSection/ChefsSection";
-import MenuStarters from "./MenuStarters/MenuStarters";
-import MainDishes from "./MainDishes/MainDishes";
-import MenuSweets from "./MenuSweets/MenuSweets";
-import MenuSalads from "./MenuSalads/MenuSalads";
+import MenuParallaxTop from "./ParallaxesMenu/MenuParallaxTop/MenuParallaxTop";
+import ParallaxHeader from "./ParallaxesMenu/ParallaxHeader/ParallaxHeader";
+import "./Menu.scss";
 import DividerLine from "../../Components/reusableComponents/DividerLine/DividerLine";
+import MenuSalads from "./MenuSalads/MenuSalads";
+import MenuParallaxSecond from "./ParallaxesMenu/MenuParallaxSecond/MenuParallaxSecond";
+import MenuStarters from "./MenuStarters/MenuStarters";
+import MenuParallaxThird from "./ParallaxesMenu/MenuParallaxThird/MenuParallaxThird";
+import MainDishes from "./MainDishes/MainDishes";
+import MenuParallaxFourth from "./ParallaxesMenu/MenuParallaxFourth";
+import MenuSweets from "./MenuSweets/MenuSweets";
+import MenuParallaxFifth from "./ParallaxesMenu/MenuParallaxFifth";
 import MenuDrinks from "./MenuDrinks/MenuDrinks";
 import ScrollToTopButton from "../../Components/reusableComponents/ScrollToTopButton/ScrollToTopButton";
-import MenuParallaxElemTop from "./MenuParallaxElements/MenuParallaxElemTop";
-import MenuParallaxElemSecond from "./MenuParallaxElements/MenuParallaxElemSecond";
-import MenuParallaxElemThird from "./MenuParallaxElements/MenuParallaxElemThird";
-import MenuParallaxElemFourth from "./MenuParallaxElements/MenuParallaxElemFourth";
-import MenuParallaxElemFinal from "./MenuParallaxElements/MenuParallaxElemFinal";
-import ScrollToTop from "../../Components/reusableComponents/ScrollToTop/ScrollToTop";
-
+import MenuParallaxFinal from "./ParallaxesMenu/MenuParallaxFinal";
 
 const Menu = () => {
   return (
-    <div className="menu">
-      <ScrollToTop />
-      <div className="menu__head">
-        <h1 className="home__wrapper-title">menu</h1>
-        <p className="home__wrapper-subtext">Best Food In Azerbaijan</p>
-        <NavLink to="/cartPage" className="home__banner-link">
-          <NavLinkBtn text="ORDER NOW" className="home__nav-link-btn" />
-        </NavLink>
-      </div>
+    <div className="menu-wrapper">
+      <ParallaxHeader />
       <ChefsSection />
-    
       <DividerLine />
-
-      <MenuParallaxElemTop />
-    
+      <MenuParallaxTop />
       <MenuSalads />
-      <MenuParallaxElemSecond />
+      <MenuParallaxSecond />
       <MenuStarters />
-      <MenuParallaxElemThird />
+      <MenuParallaxThird />
       <MainDishes />
-      <MenuParallaxElemFourth />
+      <MenuParallaxFourth />
       <MenuSweets />
-      <MenuParallaxElemFinal />
+      <MenuParallaxFifth />
       <MenuDrinks />
-  
+      <MenuParallaxFinal />
       <ScrollToTopButton />
     </div>
   );

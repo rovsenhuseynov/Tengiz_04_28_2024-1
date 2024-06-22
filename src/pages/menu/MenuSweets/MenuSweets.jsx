@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./MenuSweets.scss";
-import "../General_Menu_Styles.scss";
+import "../Menu.scss";
 import SlidersComponent from "../../../Components/reusableComponents/SlidersSwiper/SlidersComponent";
 import { sweetsMenuData } from "../../../Components/reusableComponents/DataBox/Menu_Data";
 import BtnBuyNow from "../../../Components/reusableComponents/BtnBuyNow/BtnBuyNow";

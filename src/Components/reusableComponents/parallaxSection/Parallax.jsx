@@ -189,3 +189,5 @@ function Parallax({
 }
 
 export default Parallax;
+
+

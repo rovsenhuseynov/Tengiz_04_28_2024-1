@@ -1,8 +1,10 @@
 .menu-preface {
+  color: #fff;
+  padding-bottom: 5vh;
   //---------------
   position: relative;
   z-index: 4;
-//----------------------------
+  //----------------------------
   padding-inline: 5vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -14,11 +16,24 @@
     width: 100%;
     min-width: 260px;
     max-width: 460px;
+    box-shadow: 0 0 25px black;
   }
   .menu-preface__text {
     font-size: var(--fz_p);
     width: 100%;
     text-align: center;
     text-wrap: balance;
+    text-shadow: 0 0 3px black;
+    font-weight: 200;
+    letter-spacing: calc(.04vw + .04rem);
+  }
+}
+@media (max-width: 1024px) {
+  .menu-preface {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 }

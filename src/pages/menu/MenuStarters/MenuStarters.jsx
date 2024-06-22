@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./MenuStarters.scss";
-import "../General_Menu_Styles.scss";
+import "../Menu.scss";
+import "./MenuStarters.scss"
 import SlidersComponent from "../../../Components/reusableComponents/SlidersSwiper/SlidersComponent";
 import {
   coldMenuData,
