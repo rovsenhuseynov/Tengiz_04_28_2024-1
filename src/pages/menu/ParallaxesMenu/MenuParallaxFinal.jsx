@@ -3,17 +3,17 @@ import ParallaxComponent from "../../../Components/reusableComponents/ParallaxCo
 import MenuParallaxFinalImage from "../../../assets/image/restaurant_kitchen_5.webp";
 
 const MenuParallaxFinal = () => {
-  const showReservationLink = true; // Здесь можно установить нужное значение
+  const showReservationLink = true; 
 
   return (
     <div className="menu-parallaxComponents">
       <div className="mask"></div>
       <ParallaxComponent
-        backgroundImage={MenuParallaxFinalImage} // Укажите путь к вашему изображению
+        backgroundImage={MenuParallaxFinalImage} 
         title=""
         text="Make"
         subtext="a reservation"
-        showReservationLink={showReservationLink} // Передача пропа
+        showReservationLink={showReservationLink} 
       />
     </div>
   );

@@ -31,9 +31,9 @@ const Home = () => {
         <OurStory />
         <ParallaxFirst />
         <DiscoverMenu />
-        <ParallaxSecond/>
+        <ParallaxSecond />
         <CulinaryDelight />
-        <ParallaxThird/>
+        <ParallaxThird />
         <CookingW />
         <Page />
         <ParallaxReservation />

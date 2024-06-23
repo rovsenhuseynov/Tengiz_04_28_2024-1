@@ -30,8 +30,8 @@ const ParallaxThird = () => {
       <div className="mask"></div>
       <ParallaxComponent
         backgroundImage={bgImage_1}
-        title="The perfect"
-        text="BLEND"
+        title="Tasteful"
+        text="Recipes"
         alignItems="center"
         parallaxSpeed={parallaxSpeed}
         parallaxHeight={0.15}

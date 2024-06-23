@@ -1,25 +1,45 @@
-import React from "react";
-import "./ParallaxReservation.scss";
-import Parallax from "../../../Components/reusableComponents/parallaxSection/Parallax";
-import reservationImgBg from "../../../assets/image/reservation.webp";
-import { NavLink } from "react-router-dom";
-import NavLinkBtn from "../../../Components/reusableComponents/Btn/NavLinkBtn";
+import React, { useEffect, useState } from "react";
+import ParallaxComponent from "../../../Components/reusableComponents/ParallaxComponent/ParallaxComponent";
+import ParallaxReservationImage from "../../../assets/image/restaurant_kitchen_5.webp";
+import "../../../Components/reusableComponents/ParallaxComponent/ParallaxComponent.scss";
 
 const ParallaxReservation = () => {
+  const showReservationLink = true;
+  const [parallaxSpeed, setParallaxSpeed] = useState(0.3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width <= 480) {
+        setParallaxSpeed(0.7);
+      } else if (width <= 768) {
+        setParallaxSpeed(0.6);
+      } else if (width <= 1200) {
+        setParallaxSpeed(0.6);
+      } else {
+        setParallaxSpeed(.7);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="parallax-reservation">
-      <Parallax
-        backgroundImage={reservationImgBg}
-        titleItalic={
-          <span className="parallax-reservation__title-italics">Reserve</span>
-        }
-        title={
-          <span className="parallax-reservation__title">your spot today!</span>
-        }
+    <div className="menu-parallaxComponents">
+      <div className="mask"></div>
+      <ParallaxComponent
+        backgroundImage={ParallaxReservationImage}
+        title=""
+        text="your spot today!"
+        alignItems="end"
+        parallaxSpeed={parallaxSpeed}
+        parallaxHeight={1}
+        parallaxwindowHeight={1}
+        showReservationLink={showReservationLink}
       />
-      <NavLink to="/reservationForm" className="nav-link">
-        <NavLinkBtn text="make a reservation" className="order-btn" />
-      </NavLink>
     </div>
   );
 };
