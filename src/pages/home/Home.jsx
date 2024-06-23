@@ -10,7 +10,6 @@ import ParallaxReservation from "./ParallaxesInHome/ParallaxReservation";
 import NavLinkBtn from "../../Components/reusableComponents/Btn/NavLinkBtn";
 import Page from "./RubberGallery/RubberGallery";
 import ScrollToTop from "../../Components/reusableComponents/ScrollToTop/ScrollToTop";
-import ParallaxElementThird from "./ParallaxesInHome/ParallaxElementThird";
 import "./Home.scss";
 import ParallaxFirst from "./ParallaxesInHome/ParallaxFirst";
 import ParallaxThird from "./ParallaxesInHome/ParallaxThird";
@@ -34,7 +33,6 @@ const Home = () => {
         <DiscoverMenu />
         <ParallaxElementSecond />
         <CulinaryDelight />
-        {/* <ParallaxElementThird /> */}
         <ParallaxThird/>
         <CookingW />
         <Page />
