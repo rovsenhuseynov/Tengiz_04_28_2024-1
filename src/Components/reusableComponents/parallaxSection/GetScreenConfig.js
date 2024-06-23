@@ -17,7 +17,7 @@ export const getScreenConfig = (width, height) => {
       maxHeight: Infinity,
       speed: 0.15,
       offset: -65,
-      backgroundSize: "130%",
+      backgroundSize: "100%",
     },
 
     {

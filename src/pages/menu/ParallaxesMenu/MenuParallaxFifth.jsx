@@ -1,20 +1,18 @@
-
-import React from 'react'
-import ParallaxComponent from '../../../Components/reusableComponents/ParallaxComponent/ParallaxComponent';
-import MenuParallaxFifthImage from "../../../assets/image/restaurant_kitchen_6.webp"
+import React from "react";
+import ParallaxComponent from "../../../Components/reusableComponents/ParallaxComponent/ParallaxComponent";
+import MenuParallaxFifthImage from "../../../assets/image/restaurant_kitchen_6.webp";
 
 const MenuParallaxFifth = () => {
   return (
     <div className="menu-parallaxComponents">
       <div className="mask"></div>
       <ParallaxComponent
-        backgroundImage={MenuParallaxFifthImage} // Укажите путь к вашему изображению
+        backgroundImage={MenuParallaxFifthImage} 
         title="Variety"
         text="of drinks"
-       
       />
     </div>
   );
 };
 
-export default MenuParallaxFifth
+export default MenuParallaxFifth;
