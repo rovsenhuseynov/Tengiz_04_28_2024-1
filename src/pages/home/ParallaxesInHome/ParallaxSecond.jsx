@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ParallaxComponent from "../../../Components/reusableComponents/ParallaxComponent/ParallaxComponent";
-import parallaxSecondImage from "../../../assets/image/0_66/R2R.webp";
+import parallaxSecondImage from "../../../assets/image/0_66/R2.webp";
 
 const ParallaxSecond = () => {
   const [parallaxSpeed, setParallaxSpeed] = useState(0.3);
