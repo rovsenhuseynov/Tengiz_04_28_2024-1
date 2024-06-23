@@ -20,7 +20,7 @@ const ParallaxFirst = () => {
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Установить начальное значение
+    handleResize(); 
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);

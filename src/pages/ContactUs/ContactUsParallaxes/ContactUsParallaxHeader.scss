@@ -1,6 +1,5 @@
 .contactUsParallaxHeader {
-
-  .restaurant-kitchen-1{
+  .restaurant-kitchen-1 {
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
@@ -21,8 +20,21 @@
   }
   @media (max-width: 1024px) {
     .restaurant-kitchen-1 {
-      background-position:  bottom center;
+      background-position: bottom center;
     }
   }
 }
 
+//=======================================================
+
+.menu-parallaxComponents {
+  &:not(:last-of-type) {
+    margin-bottom: 5vh;
+  }
+
+  &.contact-ua-parallax {
+    &:not(:last-of-type) {
+      margin-bottom: 0; // Или любое другое значение, которое вам нужно
+    }
+  }
+}

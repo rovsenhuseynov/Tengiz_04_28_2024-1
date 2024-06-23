@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./ComponentFAQ.scss";
 import faqData from "../../../Components/reusableComponents/DataBox/Faq_Data";
-import Parallax from "../../../Components/reusableComponents/parallaxSection/Parallax";
-import FaqParallaxImg from "../../../assets/image/faq.webp";
+import ContactUaParallax from "../ContactUsParallaxes/ContactUaParallax";
 
 function formatText(text) {
   return text.replace(/\n/g, "<br>");
@@ -53,14 +52,7 @@ const ComponentFAQ = () => {
 
   return (
     <div className="componentFaq__wrapper">
-      <Parallax
-        backgroundImage={FaqParallaxImg}
-        titleItalic={<span className="title-italics">FAQ</span>}
-        title={<span className="title-subtext">Asked</span>}
-        className="restaurant-kitchen-1"
-        className_title="title"
-        className_subtitle="subtitle"
-      />
+      <ContactUaParallax />
       <div className="componentFaq">
         <div className="componentFaq-container" ref={containerRef}>
           <div className="componentFaq__list">
