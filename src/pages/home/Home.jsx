@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import ScrollToTopButton from "../../Components/reusableComponents/ScrollToTopButton/ScrollToTopButton";
 import OurStory from "./OurStory/OurStory";
 import DiscoverMenu from "./DiscoverMenu/DiscoverMenu";
-import ParallaxElementSecond from "./ParallaxesInHome/ParallaxElementSecond";
 import CulinaryDelight from "./CulinaryDelight/CulinaryDelight";
 import CookingW from "../home/CookingWorld/CookingW";
 import ParallaxReservation from "./ParallaxesInHome/ParallaxReservation";
@@ -13,6 +12,7 @@ import ScrollToTop from "../../Components/reusableComponents/ScrollToTop/ScrollT
 import "./Home.scss";
 import ParallaxFirst from "./ParallaxesInHome/ParallaxFirst";
 import ParallaxThird from "./ParallaxesInHome/ParallaxThird";
+import ParallaxSecond from "./ParallaxesInHome/ParallaxSecond";
 
 const Home = () => {
   return (
@@ -31,7 +31,7 @@ const Home = () => {
         <OurStory />
         <ParallaxFirst />
         <DiscoverMenu />
-        <ParallaxElementSecond />
+        <ParallaxSecond/>
         <CulinaryDelight />
         <ParallaxThird/>
         <CookingW />
