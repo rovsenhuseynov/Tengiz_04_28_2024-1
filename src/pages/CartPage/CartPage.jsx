@@ -19,11 +19,13 @@ const CartPage = () => {
 
   useEffect(() => {
     setShowPopup(cart.length === 0);
-    const calculateTotalPrice = () =>
-      cart.reduce(
+
+    const calculateTotalPrice = () => {
+      return cart.reduce(
         (total, item) => total + parseFloat(item.price) * item.quantity,
         0
       );
+    };
 
     const totalPrice = calculateTotalPrice();
     const discountAmount = totalPrice * 0.005;
@@ -44,12 +46,14 @@ const CartPage = () => {
       email: "",
     },
     validationSchema: Yup.object({
-      customerName: Yup.string().required("This field is required"),
-      address: Yup.string().required("This field is required"),
-      phone: Yup.string().required("This field is required"),
+      customerName: Yup.string().required(
+        "Это поле обязательно для заполнения"
+      ),
+      address: Yup.string().required("Это поле обязательно для заполнения"),
+      phone: Yup.string().required("Это поле обязательно для заполнения"),
       email: Yup.string()
-        .email("Invalid email address")
-        .required("This field is required"),
+        .email("Некорректный адрес электронной почты")
+        .required("Это поле обязательно для заполнения"),
     }),
     onSubmit: (values, { resetForm }) => {
       console.log({
@@ -119,22 +123,22 @@ const CartPage = () => {
 
           <div className="cartPage-summary">
             <p className="cartPage__summary-item number-dishes">
-              Number of dishes:{" "}
+              Количество блюд:{" "}
               {cart.reduce((total, item) => total + item.quantity, 0)}
             </p>
             <p className="cartPage__summary-item sum">
-              Sum: {totalPrice.toFixed(2)} ₼
+              Сумма: {totalPrice.toFixed(2)} ₼
             </p>
             <p className="cartPage__summary-item discount">
-              Discount: {discount.toFixed(2)} ₼
+              Скидка: {discount.toFixed(2)} ₼
             </p>
             <p className="cartPage__summary-item total">
-              Total payable: {finalPrice.toFixed(2)} ₼
+              Всего к оплате: {finalPrice.toFixed(2)} ₼
             </p>
           </div>
 
           <div className="checkout-section">
-            <h2 className="checkout-section__title">Placing an order</h2>
+            <h2 className="checkout-section__title">Оформление заказа</h2>
 
             {formik.status === "success" && (
               <div className="order-status success">
@@ -149,7 +153,7 @@ const CartPage = () => {
 
             <form onSubmit={formik.handleSubmit} className="checkout-form">
               <div className="form-group">
-                <label htmlFor="customerName">Customer Name</label>
+                <label htmlFor="customerName">Имя клиента</label>
                 <input
                   id="customerName"
                   name="customerName"
@@ -158,14 +162,14 @@ const CartPage = () => {
                   className="transparent-input"
                   autoComplete="name"
                 />
-                {formik.touched.customerName && formik.errors.customerName ? (
+                {formik.touched.customerName && formik.errors.customerName && (
                   <span className="error-message visible">
                     {formik.errors.customerName}
                   </span>
-                ) : null}
+                )}
               </div>
               <div className="form-group">
-                <label htmlFor="address">Address</label>
+                <label htmlFor="address">Адрес</label>
                 <input
                   id="address"
                   name="address"
@@ -174,14 +178,14 @@ const CartPage = () => {
                   className="transparent-input"
                   autoComplete="street-address"
                 />
-                {formik.touched.address && formik.errors.address ? (
+                {formik.touched.address && formik.errors.address && (
                   <span className="error-message visible">
                     {formik.errors.address}
                   </span>
-                ) : null}
+                )}
               </div>
               <div className="form-group">
-                <label htmlFor="phone">Phone</label>
+                <label htmlFor="phone">Телефон</label>
                 <input
                   id="phone"
                   name="phone"
@@ -190,14 +194,14 @@ const CartPage = () => {
                   className="transparent-input"
                   autoComplete="tel"
                 />
-                {formik.touched.phone && formik.errors.phone ? (
+                {formik.touched.phone && formik.errors.phone && (
                   <span className="error-message visible">
                     {formik.errors.phone}
                   </span>
-                ) : null}
+                )}
               </div>
               <div className="form-group">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Электронная почта</label>
                 <input
                   id="email"
                   name="email"
@@ -206,14 +210,14 @@ const CartPage = () => {
                   className="transparent-input"
                   autoComplete="email"
                 />
-                {formik.touched.email && formik.errors.email ? (
+                {formik.touched.email && formik.errors.email && (
                   <span className="error-message visible">
                     {formik.errors.email}
                   </span>
-                ) : null}
+                )}
               </div>
               <button type="submit" className="checkout-button">
-                Confirm the order
+                Подтвердить заказ
               </button>
             </form>
           </div>
