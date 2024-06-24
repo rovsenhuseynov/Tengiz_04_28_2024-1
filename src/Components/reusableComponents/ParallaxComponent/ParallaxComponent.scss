@@ -16,6 +16,9 @@
     display: grid;
     align-items: end;
     position: relative;
+    @media (max-width: 768px ) {
+      height: 60vh;
+    }
 
     .menu-parallaxComponents__content-context {
       display: flex;

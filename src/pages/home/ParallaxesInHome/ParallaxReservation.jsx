@@ -11,13 +11,13 @@ const ParallaxReservation = () => {
     const handleResize = () => {
       const width = window.innerWidth;
       if (width <= 480) {
-        setParallaxSpeed(0.7);
+        setParallaxSpeed(.5);
       } else if (width <= 768) {
-        setParallaxSpeed(0.6);
-      } else if (width <= 1200) {
-        setParallaxSpeed(0.6);
+        setParallaxSpeed(.5);
+      } else if (width <= 1025) {
+        setParallaxSpeed(.5);
       } else {
-        setParallaxSpeed(.7);
+        setParallaxSpeed(.8);
       }
     };
 
