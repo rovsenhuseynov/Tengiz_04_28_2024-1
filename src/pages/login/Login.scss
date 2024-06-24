@@ -10,6 +10,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  color: #cecece;
   @media (max-width: 390px) {
     padding-inline: 2vw;
   }
@@ -17,10 +18,10 @@
   .wrapper {
     overflow: hidden;
     max-width: 390px;
-    background: #fff;
+    background: rgba(129, 129, 129, 0.5);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0 20px rgba(0, 0, 0, 1);
 
     .title-text {
       display: flex;
@@ -45,7 +46,7 @@
       justify-content: space-between;
       border: 1px solid lightgrey;
       border-radius: 15px;
-
+      background-color: rgba(0, 0, 0, 0.2);
       .form-slide {
         height: 100%;
         width: 100%;
@@ -57,9 +58,8 @@
         cursor: pointer;
         z-index: 1;
         transition: all 0.6s ease;
-
-        &.signup {
-          color: #000;
+        .signup {
+          color: transparent;
         }
       }
 
@@ -72,10 +72,11 @@
         border-radius: 15px;
         background: -webkit-linear-gradient(
           left,
-          #003366,
-          #004080,
-          #0059b3,
-          #0073e6
+          rgb(193, 56, 0),
+          rgb(218, 68, 7),
+          rgb(232, 76, 12),
+          rgb(246, 84, 18),
+          rgb(255, 89, 23)
         );
         transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       }
@@ -97,11 +98,11 @@
   }
 
   #signup:checked ~ .form-slide.login {
-    color: #000;
+    color: #919191;
   }
 
   #login:checked ~ .form-slide.signup {
-    color: #000;
+    color: #888888;
   }
 
   #login:checked ~ .form-slide.login {
@@ -117,6 +118,36 @@
       display: flex;
       width: 200%;
       transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      .login {
+        .field {
+          #login-password {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
+          }
+          #login-email {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
+          }
+        }
+      }
+
+      .signup {
+        color: transparent;
+        .field {
+          #signup-email {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
+          }
+          #signup-password {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
+          }
+          #signup-confirm-password {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
+          }
+        }
+      }
 
       form {
         width: 50%;
@@ -141,7 +172,7 @@
       transition: all 0.3s ease;
 
       &:focus {
-        border-color: #1a75ff;
+        border-color: rgb(232, 76, 12);
       }
 
       &::placeholder {
@@ -150,7 +181,7 @@
       }
 
       &:focus::placeholder {
-        color: #1a75ff;
+        color: #d4d4d4;
       }
     }
   }
@@ -159,7 +190,7 @@
     margin-top: 5px;
 
     a {
-      color: #1a75ff;
+      color: #e6e6e6;;
       text-decoration: none;
 
       &:hover {
@@ -173,9 +204,9 @@
     margin-top: 30px;
 
     a {
-      color: #1a75ff;
+      color: #ffffff;
       text-decoration: none;
-
+      margin-left: 1vw;
       &:hover {
         text-decoration: underline;
       }
@@ -196,10 +227,12 @@
       left: -100%;
       background: -webkit-linear-gradient(
         right,
-        #003366,
-        #004080,
-        #0059b3,
-        #0073e6
+        rgb(167, 47, 10),
+        rgb(196, 59, 5),
+        rgb(189, 57, 5),
+        rgb(228, 67, 4),
+        rgb(246, 84, 18),
+        rgb(255, 89, 23)
       );
       border-radius: 15px;
       transition: all 0.4s ease;
@@ -226,7 +259,7 @@
   }
 
   ::selection {
-    background: #1a75ff;
+    background: rgb(232, 76, 12);
     color: #fff;
   }
 }

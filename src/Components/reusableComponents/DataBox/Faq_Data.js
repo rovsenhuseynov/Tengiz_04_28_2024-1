@@ -24,7 +24,7 @@ const faqData = [
     question:
       "4. What type of cuisine do you serve? <br> Какую кухню вы подаете?",
     answer:
-      "We specialize in Italian cuisine with a focus on fresh, locally-sourced ingredients. <br> Мы специализируемся на Азербайджанской кухне, уделяя особое внимание свежим местным ингредиентам.",
+      "We specialize in Azerbaijani cuisine with a focus on fresh, locally-sourced ingredients. <br> Мы специализируемся на Азербайджанской кухне, уделяя особое внимание свежим местным ингредиентам.",
   },
   {
     id: 5,
