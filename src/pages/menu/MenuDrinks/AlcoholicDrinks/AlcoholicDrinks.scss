@@ -1,0 +1,13 @@
+@import "../../Menu.scss";
+@import "../../../../assets/globalStyles.scss";
+
+.Alcoholic-drinks {
+  @include main-menu;
+
+  .Alcoholic-drinks__title {
+    @include items-title;
+    margin-top: calc(3vw + 1.5rem);
+  }
+
+  @include mySwiper;
+}

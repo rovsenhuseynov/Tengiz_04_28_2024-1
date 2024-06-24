@@ -1,0 +1,182 @@
+$font-sans-family: sans-serif;
+$font-serif-family: serif;
+
+// Colors
+$header-color: #090909;
+$paragraph-color: #090909;
+
+// Facts
+$fact-question-color: $header-color;
+$fact-question-color-active: #808080;
+
+// Media Sizes
+$mobile: "max-width: 767px";
+
+.componentFaq {
+  display: flex;
+  justify-content: center;
+  padding: 5vw;
+  background-color: #fff;
+  position: relative;
+  @media (max-width: 1024px) {
+    padding-inline: 2vw;
+  }
+
+  .scroll-indicator {
+    // Стрелочка указывающяя про наличие контента внизу
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #888;
+    animation: bounce 1s infinite; // Анимация стрелочки
+
+    // Анимация для стрелочки при наведении
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  .componentFaq-container {
+    width: 100%;
+    height: 70vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+
+    &::-webkit-scrollbar {
+      width: 8px; // Ширина ползунка
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(228, 228, 228); // Цвет ползунка
+      border-radius: 10px; // Радиус границ ползунка
+      transition: 0.3s;
+      &:hover {
+        background-color: rgb(153, 153, 153);
+      }
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1; // Цвет фона для трека (дорожки)
+    }
+
+    .componentFaq-container::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 30px; // Высота градиента
+      background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0)
+      );
+      pointer-events: none; // Чтобы градиент не мешал скроллу
+    }
+
+    .componentFaq__list {
+      list-style: none;
+      padding-left: 40px;
+      padding-right: 5px;
+      border: 0.5px solid transparent;
+
+      .componentFaq__list-items {
+        border-bottom: 1px solid #999999;
+        margin-bottom: 5px;
+
+        &.active {
+          .answer {
+            padding-bottom: 25px;
+            opacity: 1;
+            transition: max-height 0.5s ease, opacity 0.5s ease,
+              padding-bottom 0.5s ease;
+          }
+          .question {
+            color: $fact-question-color-active;
+            transition: color 0.5s ease;
+          }
+        }
+
+        .question {
+          color: $fact-question-color;
+          font-size: var(--fz_p);
+          font-weight: 400;
+          text-transform: uppercase;
+          position: relative;
+          cursor: pointer;
+          padding: 20px 0;
+          transition: color 0.5s ease;
+
+          @media screen and (#{$mobile}) {
+            font-size: var(--fz_p);
+          }
+
+          .plus-minus-toggle {
+            cursor: pointer;
+            height: 21px;
+            position: absolute;
+            width: 21px;
+            left: -40px;
+            top: 50%;
+            z-index: 2;
+
+            &:before,
+            &:after {
+              background: #000;
+              content: "";
+              height: 5px;
+              left: 0;
+              position: absolute;
+              top: 0;
+              width: 21px;
+              transition: transform 500ms ease;
+            }
+
+            &:after {
+              transform-origin: center;
+            }
+
+            &.collapsed {
+              &:after {
+                transform: rotate(90deg);
+              }
+
+              &:before {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+
+        .answer {
+          color: $paragraph-color;
+          font-size: var(--fz_H6);
+          line-height: 24px;
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          transition: max-height 0.5s ease, opacity 0.5s ease,
+            padding-bottom 0.5s ease;
+          p {
+            margin-bottom: 1.5vh;
+          }
+        }
+      }
+    }
+  }
+}

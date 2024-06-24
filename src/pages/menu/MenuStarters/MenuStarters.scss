@@ -1,0 +1,24 @@
+@import "../Menu.scss";
+@import "../../../assets/globalStyles.scss";
+
+.menu-starters {
+  @include main-menu;
+
+  .menu-starters__title {
+    @include sectional-title-styles-in-menu;
+  }
+
+  .menu-starters__hot,
+  .menu-starters__cold {
+    height: 100%;
+    .hot-startes-title,
+    .cold-startes-title {
+      @include items-title;
+    }
+  }
+  .menu-starters__cold {
+    margin-bottom: calc(3vw + 1.5rem);
+  }
+
+  @include mySwiper;
+}

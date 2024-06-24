@@ -1,0 +1,64 @@
+@import "../../../assets/globalStyles.scss";
+
+.ourStory {
+  .ourStory__container {
+    padding: 5vw;
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: 1fr 1.2fr;
+
+    .ourStory__text {
+      user-select: none;
+      text-align: center;
+      margin-bottom: calc(2vw + 1rem);
+
+      .ourStory__logo {
+        margin-bottom: calc(1.4vw + 0.6rem);
+        text-shadow: 1px 1px 4px rgb(46, 46, 46);
+        .ourStory__logo-title {
+          font-family: "Herr Von Muellerhoff", cursive;
+          font-size: calc(6vw + 3rem);
+          font-weight: 500;
+          text-align: center;
+          color: var(--darkSand_txt_color);
+          line-height: 30px;
+          margin-top: calc(2vw + 1.7rem);
+        }
+        .ourStory__logo-subtitle {
+          font-size: calc(3vw + 1.5rem);
+          font-weight: 700;
+        }
+      }
+
+      .decorative-divider {
+        font-size: calc(1vw + 0.5rem);
+        margin-bottom: calc(1.4vw + 0.6rem);
+      }
+
+      .ourStory__text-p {
+        font-size: var(--fz_p);
+        text-wrap: balance;
+        margin-bottom: calc(1.6vw + 0.8rem);
+        color: var(--dark_white);
+        font-weight: 300;
+      }
+
+      @include button-styles-with-underline;
+    }
+
+    // .ourStory__img {
+    //   box-shadow: 0 0 15px rgb(0, 0, 0);
+    // }
+
+    // ========================================
+    // 3D rotating cube
+    // ========================================
+
+  }
+  
+  @media (max-width: 1024px) {
+    .ourStory__container {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.popup-content img {
+  max-height: 90vh;
+  width: auto;
+  object-fit: contain;
+  border: 0.5px solid var(--darkSand_txt_color);
+  box-shadow: 0 0 30px black;
+  z-index: 5555;
+  cursor: pointer;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  margin-top: -150px;
+}
+.swiper {
+  margin: 0;
+  .swiper-wrapper{
+    height: auto;
+  }
+}
+.mySwiper {
+  .swiper-pagination {
+    position: relative;
+    margin-bottom: calc(1vw + 1rem);
+    padding-top: calc(2vw + 1rem);
+  }
+}

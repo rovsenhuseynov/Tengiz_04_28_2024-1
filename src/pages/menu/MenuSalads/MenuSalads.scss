@@ -1,0 +1,11 @@
+@import "../Menu.scss";
+@import "../../../assets/globalStyles.scss";
+
+.salads-menu {
+  @include main-menu;
+  .salads-menu__title {
+    @include sectional-title-styles-in-menu;
+  }
+
+  @include mySwiper;
+}

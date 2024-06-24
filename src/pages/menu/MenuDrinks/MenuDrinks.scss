@@ -1,0 +1,9 @@
+@import "../Menu.scss";
+@import "../../../assets/globalStyles.scss";
+
+.drinks-menu {
+  .drinks-menu__title {
+    @include sectional-title-styles-in-menu;
+
+  }
+}

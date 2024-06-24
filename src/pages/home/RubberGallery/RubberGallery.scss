@@ -1,0 +1,109 @@
+@import "../../../assets/globalStyles.scss";
+
+.rubber-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  overflow: hidden;
+  margin-bottom: 0;
+  background-color: rgb(23, 23, 23);
+  font-weight: 200;
+
+  .rubber-gallery__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .rubber-gallery__top-logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .rubber-gallery__top-logo-title {
+        font-family: "Herr Von Muellerhoff", cursive;
+        font-size: calc(6vw + 3rem);
+        font-weight: 500;
+        text-align: center;
+        color: var(--darkSand_txt_color);
+        line-height: 50px;
+        margin-top: calc(2vw + 1.7rem);
+        text-shadow: 1px 1px 3px rgb(46, 46, 46);
+        user-select: none;
+      }
+      .rubber-gallery__top-logo-subtitle {
+        font-size: calc(3vw + 1.5rem);
+        font-weight: 700;
+        text-shadow: 1px 1px 4px rgb(46, 46, 46);
+        text-transform: uppercase;
+        line-height: 1;
+      }
+    }
+    .rubber-gallery__top-text {
+      line-height: 1.6;
+      color: var(--dark_white);
+      max-width: 50rem;
+      font-size: var(--fz_p);
+      text-transform: capitalize;
+      text-wrap: balance;
+      text-align: center;
+      margin-block: calc(2vw + 1rem);
+      user-select: none;
+    }
+  }
+
+  .rubber-gallery-wrapper {
+    display: flex;
+    width: 90vw;
+    // border: 1px solid #333;
+    padding-inline: 0.5vw;
+    padding-bottom: calc(2vw + 1rem);
+    .panel {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 65vh;
+      border-radius: 5px;
+      flex: 0.5;
+      position: relative;
+      transition: flex 0.5s ease-out;
+      color: #fff;
+      cursor: pointer;
+      margin: 0.3vw;
+      &:hover {
+        filter: brightness(70%);
+      }
+    }
+    .panel.active {
+      filter: none;
+    }
+
+    .active {
+      flex: 5;
+    }
+    .active .rubber-gallery-text {
+      opacity: 1;
+      transition: opacity 0.4s ease-in 0.4;
+      z-index: 1;
+    }
+
+    .rubber-gallery-text {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      opacity: 0;
+      transition: opacity 0.4s ease-in 0.4s, transform 0.4s ease-in 0.4s;
+      background-color: rgba(0, 0, 0, 0.4);
+      text-wrap: nowrap;
+      user-select: none;
+      font-size: var(--fz_H2);
+      font-weight: 500;
+      font-family: "Poppins", sans-serif;
+      text-shadow: 0 0 5px black;
+      text-align: center;
+      padding: 1vw;
+      z-index: -1;
+      color: #fff;
+    }
+  }
+}

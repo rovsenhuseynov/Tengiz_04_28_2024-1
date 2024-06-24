@@ -1,0 +1,17 @@
+.scroll-to-top-btn {
+  user-select: none;
+  width: calc(2vw + 2rem);
+  height: calc(2vw + 2rem);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  transform: rotate(180deg);
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transition: all 0.3s;
+  z-index: 5;
+  &:hover {
+    transform: rotate(540deg);
+  }
+}
