@@ -190,7 +190,7 @@
     margin-top: 5px;
 
     a {
-      color: #e6e6e6;;
+      color: #e6e6e6;
       text-decoration: none;
 
       &:hover {
@@ -200,7 +200,9 @@
   }
 
   .form-inner form .signup-link {
-    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     margin-top: 30px;
 
     a {
