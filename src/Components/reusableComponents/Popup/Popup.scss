@@ -4,13 +4,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-
   z-index: 4;
 
   .popup-wrapper {
     display: grid;
     place-items: center;
-    background-image:  url(../../../assets/image/basket_empty_1.webp);
+    background-image: url(../../../assets/image/basket_empty_1.webp);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -27,19 +26,19 @@
 
     .popup-close-button {
       user-select: none;
-       .popup-close-button-img{
+      .popup-close-button-img {
         box-shadow: none;
-        border: none ;
+        border: none;
         width: 3em;
         height: 3em;
-        transition: .3s;
-        &:hover{
+        transition: 0.3s;
+        &:hover {
           width: 3.5em;
           height: 3.5em;
         }
-       }
+      }
     }
-    .basket-empty{
+    .basket-empty {
       font-size: calc(1vw + 1em);
       text-transform: uppercase;
       text-shadow: 0 0 3px black;
@@ -47,12 +46,3 @@
     }
   }
 }
-// @media (max-width: 1280px) {
-//   .popup {
-//     background: url(../../../assets/image/basket_empty_3.webp);
-//     background-size: contain;
-//     background-repeat: no-repeat;
-//     background-position: center center;
-//   }
-
-// }
