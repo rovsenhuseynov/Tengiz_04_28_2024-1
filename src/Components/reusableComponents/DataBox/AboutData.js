@@ -1,4 +1,4 @@
-import VariedMenuIcon from "../../../assets/svg/About_BenefitSection_svg/Menu/Varied_menu.png";
+import VariedMenuIcon from "../../../assets/svg/About_BenefitSection_svg/Menu/Varied_menu.svg";
 import FreshIcon from "../../../assets/svg/About_BenefitSection_svg/fresh/fresh_2.svg";
 import FastServiceIcon from "../../../assets/svg/About_BenefitSection_svg/fast_service/fast_service.png.svg";
 import ChefIcon from "../../../assets/image/Chef.svg";
