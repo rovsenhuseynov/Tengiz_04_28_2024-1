@@ -11,7 +11,7 @@ function AboutBanner() {
         <p className="about__banner-subtext">Best Food In Azerbaijan</p>
         <Link to="/cartPage" className="about__banner-link">
           <NavLinkBtn text="ORDER NOW" className="about__nav-link-btn" />
-        </Link>
+        </Link >
       </div>
     </div>
   );
